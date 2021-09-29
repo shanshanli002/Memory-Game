@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
    };
 
    audio.addEventListener('click', function(event){
-    //music by tomspicy https://soundcloud.com/tomspicy/kioku    
+    //music by tomspicy https://soundcloud.com/tomspicy/kioku
     playAudio();
    });
-   
+
     //each var. will change in value
     function randomColor(){
         const r = Math.floor(Math.random()*100);
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function(){
     const randomh1 = setInterval(function(){
     h1.style.color = randomColor();
     }, 2000);
-    
-    
+
+
     //card flipping logic
     const cards = document.querySelectorAll('.card');
     const memoryGame = document.querySelector('#memory-game');
     const cardFront = document.querySelectorAll('.card-front');
     const cardBack = document.querySelectorAll('.card-back');
-    //instance vars. 
+    //instance vars.
     let flippedCard = false;
     let firstCard;
     let firstCardSquirtle;
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 firstCardSquirtle = this.dataset.framework;
                 console.log(firstCardSquirtle,firstCardSquirtle);
                 counter++;
-            
+
             } else if(firstCard != undefined){
                 secondCard = this;
                 secondCardSquirtle = this.dataset.framework;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         if(score === 6){
-            alert('GAME OVER, YOU WON!');
+            alert('GAME OVER, YOU WIN!');
         }
     }));
 
